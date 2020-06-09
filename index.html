@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<!-- note: images from walmart
+ -->
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+	<section id="shopping_content">
+	  <div>
+	    <div id="Client" class="tabcontent">
+
+	      <br>
+	      <br>
+
+	      <nav aria-label="breadcrumb">
+	        <ol class="breadcrumb">
+	          <li class="breadcrumb-item active" aria-current="page">Home</li>
+	        </ol>
+	      </nav>
+
+	      	<div class="outer-size">
+				<h3>New Ocean Supermarket</h3>
+		  	</div>
+
+	      <br>
+
+	      <c>Tell us about yourself to get the best experience!</c>
+
+	      <br>
+
+	      <h class="customer_information"><b>Would you prefer to view only organic products?</b></h>
+
+	        <div>
+	          <div class="form-check form-check-inline">
+	            <label for="yes" class="form-check-label selection_label">Yes</label>
+	            <input class="form-check-input" name="organicOnly" type="radio" id="yes" value="yes">
+	          </div>
+	          <div class="form-check form-check-inline">
+	            <label for="no" class="form-check-label selection_label">No</label>
+	            <input class="form-check-input" name="organicOnly" type="radio" id="no" value="no">
+	          </div>
+	        </div>
+
+	      <h class="customer_information"><b>Do you have any dietary restrictions?</b></h>
+
+	      <div id="dietSelect" name="dietSelect" onchange="populateListProductChoices()">
+	        <div>
+	          <div class="form-check form-check-inline">
+	            <label class="form-check-label selection_label">Vegetarian</label>
+	            <input class="form-check-input" type="checkbox" id="Vegetarian">
+	          </div>
+	          <div class="form-check form-check-inline">
+	            <label class="form-check-label selection_label">Gluten Free</label>
+	            <input class="form-check-input" type="checkbox" id="GlutenFree">
+	          </div>
+	        </div>
+	      </div>
+
+	      <br>
+
+	      <button type="button" onclick="openInfo(event, 'Products')" class="btn btn-outline-dark">Next</button>
+
+	    </div>
+
+	    <br>
+	    <br>
+
+	    <div id="Products" class="tabcontent">
+
+	      <nav aria-label="breadcrumb">
+	        <ol class="breadcrumb">
+	          <li class="breadcrumb-item"><a onclick="openInfo(event, 'Client')" id="default">Home</a></li>
+	          <li class="breadcrumb-item active" aria-current="page">Products</li>
+	        </ol>
+	      </nav>
+
+	      <div class="outer-size">
+				<h3>New Ocean Supermarket</h3>
+		  </div>
+
+	      <br>
+
+	      <c>Below are the products selected based on your dietary restrictions & preferences.</c>
+
+	      <br>
+	      <br>
+
+	  	  <b>Click on one of the sections below to shop for the items that you are looking for.</b>
+
+	  	  <br>
+
+	  	  <b>*We have a limit of 5 items per customer*</b>
+
+	      <br>
+	      <br>
+
+	      <div id="accordion">
+
+	        <div id="bakery_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+	              BAKERY
+	            </a>
+	          </div>
+	          <div id="collapseOne" class="collapse" data-parent="#accordion">
+	            <div id="bakery" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="dairy_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+	              DAIRY
+	            </a>
+	          </div>
+	          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+	            <div id="dairy" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="fruit_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseThree">
+	              FRUITS
+	            </a>
+	          </div>
+	          <div id="collapseThree" class="collapse" data-parent="#accordion">
+	            <div id="fruit" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="vegetable_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseFour">
+	              VEGETABLES
+	            </a>
+	          </div>
+	          <div id="collapseFour" class="collapse" data-parent="#accordion">
+	            <div id="vegetable" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="meat_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseFive">
+	              MEAT
+	            </a>
+	          </div>
+	          <div id="collapseFive" class="collapse" data-parent="#accordion">
+	            <div id="meat" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="seafood_section" class="card">
+	          <div class="card-header">
+	            <a class="card-link" data-toggle="collapse" href="#collapseSix">
+	              SEAFOOD
+	            </a>
+	          </div>
+	          <div id="collapseSix" class="collapse" data-parent="#accordion">
+	            <div id="seafood" class="card-body">
+	            </div>
+	          </div>
+	        </div>
+
+	      </div>
+
+	      <br>
+
+	      <button id="addCart" type="button" onclick="selectedItems(); openInfo(event, 'Cart');" class="btn btn-outline-success">Add selected items to cart</button>
+
+	    </div>
+
+	    <div id="Cart" class="tabcontent">
+
+	      <nav aria-label="breadcrumb">
+	        <ol class="breadcrumb">
+	          <li class="breadcrumb-item"><a onclick="openInfo(event, 'Client')" id="default">Home</a></li>
+	          <li class="breadcrumb-item"><a onclick="openInfo(event, 'Products')">Products</a></li>
+	          <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+	        </ol>
+	      </nav>
+
+	      <div class="outer-size">
+				<h3>New Ocean Supermarket</h3>
+		  </div>
+
+	      <br>
+
+	      <c>Checkout</c>
+
+	      <div id="displayCart"></div>
+
+	      <button type="button" class="btn btn-outline-dark">Confirm</button>
+
+	    </div>
+	  </div>
+	</section>
+
+	<script src="./scripts/groceries.js"></script>
+	<script src="./scripts/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	
+	<script>
+	  openInfo(event, 'Client');
+	</script>
+	
+	</body>
+
+	<div id="footer">
+  		<div id="footer-credit">Website Designed by Abhishek Saravanabavan (300062167)</div>
+	</div>
+
+</html>

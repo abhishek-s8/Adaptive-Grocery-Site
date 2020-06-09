@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
+
+body {
+  margin: 0;
+  font-family: 'Arial';
+  font-size: 14px;
+  background-image: url('images/shopping.jpg');
+  background-size: cover;
+  margin-bottom:100px;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #eee;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+b {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+c {
+  color: #B22222;
+  font-weight: 500;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+.outer-size {
+  padding: 0 70px;
+}
+
+.card-link{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.card{
+  display: none;
+}
+
+.card-body{
+  background: white;
+}
+
+.card-header{
+  background: #B22222;
+  border-style: solid;
+  border-color: #fff;
+  height: 5rem;
+}
+
+#shopping_content{
+  min-height: 75.5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tablinks{
+  width: 250px;
+  font-size: 2.5rem;
+}
+.customer_information{
+  color:rgb(116, 128, 209);
+}
+
+#product_option{
+  display: flex;
+   align-items: center;
+}
+
+.selection_label{
+  margin: 0 15px;
+  font-weight: 100;
+  font-size: 1rem;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  width: 90rem;
+  min-height: 30rem;
+  border-top: none;
+  top: 0px;
+}
+
+.breadcrumb{
+  color:rgb(15, 180, 103);
+  font-size: 2rem;
+  width: 100%;
+}
+
+.breadcrumb a{
+  cursor: pointer;
+}
+
+.default{
+  color: #B22222;
+}
+
+.form-check-label{
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.35em;
+}
+
+#footer {
+  display: flex;
+  width: 100vw;
+  bottom: 0px;
+  height: 55px;
+  background-color: black;
+  position: fixed;
+}
+
+#footer-credit {
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  align-self: flex-end;
+  margin: 0 auto;
+  font-style: italic;
+}
